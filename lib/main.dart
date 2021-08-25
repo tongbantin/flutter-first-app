@@ -27,13 +27,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Counter"),
+        title: Text("PopLee"),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Love"),
+            Text("Send Love"),
             Text(
               number.toString(),
               style: TextStyle(fontSize: 60),
@@ -46,13 +46,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-        },
+        onPressed: addNumber,
         child: Icon(Icons.add),
       ),
     );
+  }
+
+  void addNumber() {
+    setState(() {
+      number++;
+    });
   }
 }
