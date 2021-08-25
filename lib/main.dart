@@ -33,12 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Numbre"),
+            Text("Love"),
             Text(
               number.toString(),
               style: TextStyle(fontSize: 60),
             ),
-            Text("0sdsdsd"),
+            Text("times"),
             Image(
                 image: NetworkImage(
                     "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcS-lrRUd1IHPGjT4Z7PZJh3BfB4deUXE_A95Syki1EFR1KHOnUrau0pSMD3SOuu"))
@@ -46,8 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        //child: Text('+',style: TextStyle(fontSize: 30),),
+        onPressed: () {
+          setState(() {
+            number++;
+          });
+        },
         child: Icon(Icons.add),
       ),
     );
