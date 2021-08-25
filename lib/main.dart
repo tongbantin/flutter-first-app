@@ -15,10 +15,9 @@ class MyApp extends StatelessWidget {
           title: Text("Flutter"),
         ),
         body: Center(
-          child: Text(
-            "Hello flutterss sdass",
-            style: TextStyle(fontSize: 30, color: Colors.purple),
-          ),
+          child: Image(
+              image: NetworkImage(
+                  "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcS-lrRUd1IHPGjT4Z7PZJh3BfB4deUXE_A95Syki1EFR1KHOnUrau0pSMD3SOuu")),
         ),
       ),
       theme: ThemeData(primarySwatch: Colors.pink),
