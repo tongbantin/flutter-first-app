@@ -15,9 +15,10 @@ class MyApp extends StatelessWidget {
           title: Text("Flutter"),
         ),
         body: Center(
-          child: Image(
-              image: NetworkImage(
-                  "http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcS-lrRUd1IHPGjT4Z7PZJh3BfB4deUXE_A95Syki1EFR1KHOnUrau0pSMD3SOuu")),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[Text("01"), Text("02"), Text("03"),Image(image: NetworkImage("http://t3.gstatic.com/licensed-image?q=tbn:ANd9GcS-lrRUd1IHPGjT4Z7PZJh3BfB4deUXE_A95Syki1EFR1KHOnUrau0pSMD3SOuu"))],
+          ),
         ),
       ),
       theme: ThemeData(primarySwatch: Colors.pink),
