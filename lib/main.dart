@@ -36,31 +36,52 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Container(
               decoration: BoxDecoration(
-                  color: Colors.greenAccent,
-                  borderRadius: BorderRadius.circular(30)),
-              height: 150,
+                  color: Colors.blue, borderRadius: BorderRadius.circular(30)),
+              height: 120,
               padding: const EdgeInsets.all(8.0),
               child: Row(
-                children: [Text("Balance "), Text("100")],
+                children: [
+                  Text(
+                    "Balance ",
+                    style: head,
+                  ),
+                  Text(
+                    "100",
+                    style: detail,
+                  )
+                ],
               ),
             ),
             Container(
               decoration: BoxDecoration(
-                  color: Colors.greenAccent,
-                  borderRadius: BorderRadius.circular(30)),
-              height: 150,
+                  color: Colors.green[200], borderRadius: BorderRadius.circular(30)),
+              height: 120,
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Income ",
+                    style: head,
+                  ),
+                  Text(
+                    "15000",
+                    style: detail,
+                  )
+                ],
+              ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.greenAccent,
-                  borderRadius: BorderRadius.circular(30)),
-              height: 150,
-            )
           ],
         ),
       ),
     );
   }
 
-  var head = TextStyle(fontSize: 30);
+  var head = TextStyle(
+    fontSize: 30,
+    color: Colors.white,
+  );
+  var detail = TextStyle(
+    fontSize: 30,
+    color: Colors.white,
+  );
 }
