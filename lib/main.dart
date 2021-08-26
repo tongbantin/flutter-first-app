@@ -31,23 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("PopLee"),
       ),
-      body: Center(
-        child: ListView(children: getData(10)),
-      ),
+      body: ListView.builder(
+          itemCount: 15,
+          itemBuilder: (BuildContext context, int index) {
+            return ListTile(title: Text("Title :$index"));
+          }),
     );
-  }
-
-  List<Widget> getData(int count) {
-    List<Widget> data = [];
-    for (var i = 0; i < count; i++) {
-      var menu = ListTile(
-          title: Text(
-        "Title :" + i.toString(),
-        style: TextStyle(fontSize: 25),
-      ),
-      subtitle: Text("subtitle ${i+1}"),);
-      data.add(menu);
-    }
-    return data;
   }
 }
