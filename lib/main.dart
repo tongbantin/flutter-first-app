@@ -44,17 +44,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text(
                     "Balance ",
                     style: head,
+                    
                   ),
-                  Text(
-                    "100",
-                    style: detail,
+                  Expanded(
+                    child: Text(
+                      "10000",
+                      style: detail,
+                      textAlign: TextAlign.right,
+                    ),
                   )
                 ],
               ),
             ),
             Container(
               decoration: BoxDecoration(
-                  color: Colors.green[200], borderRadius: BorderRadius.circular(30)),
+                  color: Colors.lightGreen, borderRadius: BorderRadius.circular(30)),
               height: 120,
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -62,10 +66,36 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text(
                     "Income ",
                     style: head,
+                    
                   ),
+                  Expanded(
+                    child: Text(
+                      "15000",
+                      style: detail,
+                      textAlign: TextAlign.right,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.red[300], borderRadius: BorderRadius.circular(30)),
+              height: 120,
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
                   Text(
-                    "15000",
-                    style: detail,
+                    "Expense ",
+                    style: head,
+                    
+                  ),
+                  Expanded(
+                    child: Text(
+                      "5000",
+                      style: detail,
+                      textAlign: TextAlign.right,
+                    ),
                   )
                 ],
               ),
