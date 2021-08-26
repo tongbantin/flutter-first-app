@@ -23,35 +23,35 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var menus = [
-    FoodMenu("Shrimp", "500", "assets/images/01.jpg"),
-    FoodMenu("Fried rice", "100", "assets/images/02.jpg"),
-    FoodMenu("Somtum", "60", "assets/images/03.jpg")
-  ];
-
 //แสดงผล
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Menu"),
+        title: Text("My account"),
       ),
-      body: ListView.builder(
-          itemCount: menus.length,
-          itemBuilder: (BuildContext context, int index) {
-            var menu = menus[index];
-            return ListTile(
-              leading: Image.asset("${menu.img}"),
-              title: Text(
-                "${menu.name}",
-                style: head,
-              ),
-              subtitle: Text("${menu.price} บาท"),
-              onTap: () {
-                print(menu.name);
-              },
-            );
-          }),
+      body: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.greenAccent,
+                borderRadius: BorderRadius.circular(30)),
+            height: 150,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.greenAccent,
+                borderRadius: BorderRadius.circular(30)),
+            height: 150,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.greenAccent,
+                borderRadius: BorderRadius.circular(30)),
+            height: 150,
+          )
+        ],
+      ),
     );
   }
 
