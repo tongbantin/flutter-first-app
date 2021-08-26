@@ -30,27 +30,34 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("My account"),
       ),
-      body: Column(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(30)),
-            height: 150,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(30)),
-            height: 150,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(30)),
-            height: 150,
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.greenAccent,
+                  borderRadius: BorderRadius.circular(30)),
+              height: 150,
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [Text("Balance "), Text("100")],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.greenAccent,
+                  borderRadius: BorderRadius.circular(30)),
+              height: 150,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.greenAccent,
+                  borderRadius: BorderRadius.circular(30)),
+              height: 150,
+            )
+          ],
+        ),
       ),
     );
   }
