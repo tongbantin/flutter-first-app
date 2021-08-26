@@ -44,7 +44,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   Text(
                     "Balance ",
                     style: head,
-                    
                   ),
                   Expanded(
                     child: Text(
@@ -56,17 +55,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             Container(
               decoration: BoxDecoration(
-                  color: Colors.lightGreen, borderRadius: BorderRadius.circular(30)),
-              height: 120,
+                  color: Colors.lightGreen,
+                  borderRadius: BorderRadius.circular(30)),
+              height: 100,
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
                     "Income ",
                     style: head,
-                    
                   ),
                   Expanded(
                     child: Text(
@@ -78,17 +80,45 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             Container(
               decoration: BoxDecoration(
-                  color: Colors.red[300], borderRadius: BorderRadius.circular(30)),
-              height: 120,
+                  color: Colors.red[300],
+                  borderRadius: BorderRadius.circular(30)),
+              height: 100,
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
                     "Expense ",
                     style: head,
-                    
+                  ),
+                  Expanded(
+                    child: Text(
+                      "50000",
+                      style: detail,
+                      textAlign: TextAlign.right,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.orangeAccent,
+                  borderRadius: BorderRadius.circular(30)),
+              height: 100,
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "Pay bill ",
+                    style: head,
                   ),
                   Expanded(
                     child: Text(
