@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'FoodMenu.dart';
+
 void main() {
   var app = MyApp();
   runApp(app);
@@ -22,10 +23,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var menu = [
-    FoodMenu("Shrimp", "500","assets/images/01.jpg"),
-    FoodMenu("Fried rice", "100","assets/images/02.jpg"),
-    FoodMenu("Somtum", "60","assets/images/03.jpg")
+  var menus = [
+    FoodMenu("Shrimp", "500", "assets/images/01.jpg"),
+    FoodMenu("Fried rice", "100", "assets/images/02.jpg"),
+    FoodMenu("Somtum", "60", "assets/images/03.jpg")
   ];
 
 //แสดงผล
@@ -36,12 +37,23 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Menu"),
       ),
       body: ListView.builder(
-          itemCount: menu.length,
+          itemCount: menus.length,
           itemBuilder: (BuildContext context, int index) {
-            return ListTile(leading: Image.asset("${menu[index].img}"), title: Text("${menu[index].name}",style: head,)
-            ,subtitle: Text("${menu[index].price} บาท"),);
+            var menu = menus[index];
+            return ListTile(
+              leading: Image.asset("${menu.img}"),
+              title: Text(
+                "${menu.name}",
+                style: head,
+              ),
+              subtitle: Text("${menu.price} บาท"),
+              onTap: () {
+                print(menu.name);
+              },
+            );
           }),
     );
   }
+
   var head = TextStyle(fontSize: 30);
 }
